@@ -1,0 +1,8 @@
+html
+css
+javascript
+nodejs
+mongodb
+mysql
+react
+python
