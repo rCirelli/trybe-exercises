@@ -8,4 +8,7 @@ react
 python
 Preparação para entrevistas
 Mentoria individual sobre carreira
-[3~
+Habilidades sociocomportamentais
+Linux (bash)
+Networking
+LinkedIn
