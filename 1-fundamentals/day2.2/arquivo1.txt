@@ -6,3 +6,7 @@ mongodb
 mysql
 react
 python
+Habilidades sociocomportamentais
+Linux (bash)
+Networking
+LinkedIn
