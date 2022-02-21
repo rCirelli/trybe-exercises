@@ -6,6 +6,8 @@ mongodb
 mysql
 react
 python
+Preparação para entrevistas
+Mentoria individual sobre carreira
 Habilidades sociocomportamentais
 Linux (bash)
 Networking
