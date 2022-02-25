@@ -1,0 +1,47 @@
+div:hover {
+    border: 3px dashed gray;
+}
+
+/* Estilização individual DIV */
+div:first-of-type {
+    color: green;
+}
+
+div:nth-of-type(2) {
+    color: purple;
+}
+
+div:nth-of-type(3) {
+    color: teal;
+    font-size: 50px;
+}
+
+div:nth-of-type(4) {
+    color: navy;
+}
+
+div:nth-of-type(5) {
+    color:khaki;
+}
+
+/* estilização individual h3 */
+
+h3:nth-of-type(1) {
+    text-decoration: line-through;
+}
+
+h3:nth-of-type(2) {
+    font-weight: 800;
+}
+
+h3:nth-of-type(3) {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3:nth-of-type(4) {
+    font-style: italic;
+}
+
+h3:nth-of-type(5){
+    text-decoration: underline;
+}
