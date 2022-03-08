@@ -1,0 +1,21 @@
+h1, p, li {
+    text-align: center;
+}
+
+li:hover {
+    background-color: dodgerblue;    
+    font-size: 30px;
+}
+
+li:active {
+    font-family: monospace;
+    font-size: 20px;
+}
+
+#riscado {
+    text-decoration: line-through;
+}
+
+ul, ol {
+    list-style: none;
+}
