@@ -169,6 +169,44 @@ function profit(a, b){
 //Requisito 11:
 // Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
 function netSalary(a=0){
-    const salary = a;
+    let netSalary = a;
+    let inss = 0;
+    let ir = 0;
+    let tax = 0;
     
+    //calcula INSS
+    if(a >= 5189.82){
+        inss = 570.88;
+    } else if(a >= 2594.93 && a <= 5189.82){
+        inss = a * 0.11;
+    } else if(a >= 1556.95 && a <= 2594.92){
+        inss = a * 0.09;
+    } else{
+        inss = a * 0.08;   
+    }
+
+    let calcBase = netSalary-inss;
+
+    //calcula IR
+    if(calcBase >= 4664.68){
+        ir = calcBase * 0.275;
+        tax = 869.36;
+    } else if(calcBase >= 3751.06 && calcBase <= 4664.68){
+        ir = calcBase * 0.225;
+        tax = 636.13;
+    } else if(calcBase >= 2826.66 && calcBase <= 3751.05){
+        ir = calcBase * 0.15;
+        tax = 354.80;
+    } else if(calcBase >= 1903.99 && calcBase <= 2826.65){
+        ir = calcBase * 0.075;
+        tax = 142.80;
+    } else {
+        ir = 0;
+        tax = 0;
+    }
+    ir = (ir - tax).toFixed(2);
+    inss = inss.toFixed(2);
+    netSalary = (a - ir - inss).toFixed(2);
+
+    console.log('R$',a.toFixed(2),'- IR (R$',ir,') - INSS(R$',inss,') = R$',netSalary);
 }
