@@ -1,0 +1,77 @@
+#color-pallete {
+  color: #253c78;
+  color: #102b3f;
+  color: #759aab;
+  color: #faa916;
+  color: #fffbfa;
+  color: #0a182e; /*background*/
+  color: #ccd5f5; /*text title*/
+  color: #8891af; /*text*/
+  color: #65ffdc; /*accent*/
+  color: #e7e7e7; /*div background*/
+}
+
+* {
+  margin: 0;
+  background-color: #0a182e;
+}
+
+section div {
+  margin: 10px 2px;
+  border: 2px solid #65ffdc;
+}
+
+#container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+#header-container {
+  color: #ccd5f5;
+  padding: 20px;
+}
+
+.emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  margin: 56px 0;
+  width: 400px;
+}
+
+.emergency-tasks div {
+  height: 198px;
+}
+.emergency-tasks h3 {
+  color: #65ffdc;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.no-emergency-tasks {
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+}
+
+.no-emergency-tasks div {
+  height: 198px;
+}
+
+.no-emergency-tasks h3 {
+  color: #65ffdc;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#footer-container {
+  color: white;
+  background-color: #003533;
+  font-weight: 700;
+  padding: 15px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#footer-container div{
+  background-color: #003533;
+}
