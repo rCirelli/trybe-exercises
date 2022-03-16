@@ -41,13 +41,24 @@ input.addEventListener('keyup', alterTechText);
 function redirect(event) {
   let url = 'https://rcirelli.github.io/'
   window.open(url);
-  console.log('alguma coisa aconteceu');
 }
 myWebpage.addEventListener('click', redirect);
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+function changeColor(event) {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  event.target.style = `color: rgb(${r}, ${g}, ${b})`;
+}
 
+function resetColor(event) {
+  event.target.style = `color: white`;
+}
+
+myWebpage.addEventListener('mouseover', changeColor);
+myWebpage.addEventListener('mouseleave', resetColor);
 // Segue abaixo um exemplo do uso de event.target:
 
 
