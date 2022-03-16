@@ -23,6 +23,7 @@ function liAddClassTech(event) {
     liRemClass();
     event.target.className = 'tech';
   }
+  input.focus();
 }
 firstLi.addEventListener('click', liAddClassTech);
 secondLi.addEventListener('click', liAddClassTech);
@@ -70,6 +71,8 @@ function resetText(event) {
 }
 
 firstLi.addEventListener('dblclick', resetText);
+secondLi.addEventListener('dblclick', resetText);
+thirdLi.addEventListener('dblclick', resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
