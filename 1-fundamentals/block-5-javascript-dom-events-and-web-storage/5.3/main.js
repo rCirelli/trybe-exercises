@@ -11,23 +11,39 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function addClass(event) {
-  if (event.target.className === 'tech') {
-    event.target.className = null;    
-  } else {
+function liRemClass() {
+  firstLi.className = '';
+  secondLi.className = '';
+  thirdLi.className = '';
+  input.value = '';
+}
+
+function liAddClassTech(event) {
+  if (event.target.className !== 'tech') {
+    liRemClass();
     event.target.className = 'tech';
   }
 }
-firstLi.addEventListener('click', addClass);
-secondLi.addEventListener('click', addClass);
-thirdLi.addEventListener('click', addClass);
+firstLi.addEventListener('click', liAddClassTech);
+secondLi.addEventListener('click', liAddClassTech);
+thirdLi.addEventListener('click', liAddClassTech);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+function alterTechText(event) {
+  document.getElementsByClassName('tech')[0].innerText = event.target.value;
+}
+input.addEventListener('keyup', alterTechText);
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
+function redirect(event) {
+  let url = 'https://rcirelli.github.io/'
+  window.open(url);
+  console.log('alguma coisa aconteceu');
+}
+myWebpage.addEventListener('click', redirect);
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
