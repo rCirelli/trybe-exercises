@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <title>Exercícios Bloco 6.1</title>
+</head>
+<body>
+<form class="bg-secondary bg-opacity-25" action="" method="get">
+  <div class="container p-1">
+    <div class="text-center">
+      <h1 class="display-1">TrybeTrip</h1>
+      <h5 class="display-5 text-muted">Cadastre-se já!</h5>    
+    </div>
+    <div class="rounded-3 mt-4 bg-primary bg-gradient px-5 py-3 bg-opacity-75">
+      <div class="form-floating mb-3 mt-4">
+        <input class="form-control" type="text" name="" id="input-name" minlength="10" maxlength="40" required>
+        <label for="input-name">Nome</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input class="form-control" type="email" name="" id="input-email" minlength="10" maxlength="50" required>  
+        <label for="input-email">Email</label>
+      </div>
+  
+      <div class="mb-5 mt-5">
+        <p class="lead">Local pra onde quer viajar:</p>
+  
+        <input class="form-check-input" type="radio" name="radio-options" id="radio-1" required>
+        <label class="form-check-label" for="radio-1">Cidade</label>
+  
+        <input class="form-check-input ms-3" type="radio" name="radio-options" id="radio-2" required>
+        <label class="form-check-label" for="radio-2">Campo</label>
+  
+        <input class="form-check-input ms-3" type="radio" name="radio-options" id="radio-3" required>
+        <label class="form-check-label" for="radio-3">Praia</label>
+  
+        <input class="form-check-input ms-3" type="radio" name="radio-options" id="radio-4" required>
+        <label class="form-check-label" for="radio-4">Montanhas</label>
+      </div>
+          
+      <h4 class="blockquote">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h5>    
+      <textarea class="form-control" name="input-resposta" id="input-resposta" cols="40" maxlength="500" style="height: 200px" required></textarea>
+      <br><br>
+      <label class="lead" for="input-date">
+        Qual a melhor data para realizar a viagem?
+      </label>
+      <div class="mt-2 mb-5">
+        <input class="form-control" type="date" name="input-date" id="input-date" required>
+      </div>
+  
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="check-news" id="check-1">
+        <label class="form-check-label" for="check-1"><em>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</em></label>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="check-photos" id="check-2" required>
+        <label class="form-check-label" for="check-2"><em>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</em></label>  
+      </div>
+      
+      <div class="d-grid gap-4 mt-5 mb-5">
+        <button class="px-4 py-2 btn btn-primary" type="submit" id="btn-submit">Enviar</button>
+        <button class="px-4 py-2 btn btn-secondary" type="reset">Limpar</button>  
+      </div>
+    </div>
+  </div>
+</form>
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
