@@ -27,7 +27,7 @@
 }
 
 .first-section {
-  padding-top: 10px;
+  margin: 20px auto;
   font-size: 19px;
   font-weight: 500;
   display: flex;
@@ -60,6 +60,11 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 1px 1px 10px;
+}
+
+.gallery-element:hover {
+  transform: scale(1.05); 
 }
 
 .gallery-img {
@@ -72,7 +77,25 @@
   height: 190px;
 }
 
+.divider {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.divider hr {
+  width: 300px;
+}
+
+.social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .social-img {
-  width: 25px;
+  width: 35px;
   margin-left: 10px;
 }
