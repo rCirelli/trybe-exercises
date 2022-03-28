@@ -26,6 +26,14 @@
   color: white;
 }
 
+.first-section {
+  padding-top: 10px;
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;  
+}
+
 .gallery-img {
   width: 150px;
 }
