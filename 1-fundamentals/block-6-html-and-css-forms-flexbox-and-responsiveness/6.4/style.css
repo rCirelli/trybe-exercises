@@ -16,6 +16,7 @@ body {
 
 .logo-container {
   display: flex;
+  order: -1;
   justify-content: center;
   flex-basis: 268px;
 }
