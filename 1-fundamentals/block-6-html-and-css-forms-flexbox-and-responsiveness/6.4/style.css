@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  /* align-self: center; */
 }
 
 .menu-container li {
@@ -38,4 +39,5 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+  align-self: center;
 }
