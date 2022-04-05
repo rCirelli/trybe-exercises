@@ -1,5 +1,6 @@
 const { test, expect } = require('@jest/globals');
-const sum = require('./sum');
+const exp = require('constants');
+const {sum, myRemove} = require('./sum');
 
 describe('Sum function', () => {
 
@@ -14,5 +15,18 @@ describe('Sum function', () => {
   });
   test('Error message is "parameters must be numbers"', () => {
     expect( () => { sum(4, '5') }).toThrow('parameters must be numbers');
+  });
+});
+
+describe('myRemove function', () => {
+
+  test('myRemove([1, 2, 3, 4], 3) returns expected array', () => {
+    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+  });
+  test('myRemove([1, 2, 3, 4], 3) does not return [1, 2, 3, 4]', () => {
+    expect(myRemove([1, 2, 3, 4], 3)).not.toEqual([1, 2, 3, 4]);
+  });
+  test('myRemove([1, 2, 3, 4], 5) returns expected array', () => {
+    expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
   });
 });
