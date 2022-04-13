@@ -83,7 +83,7 @@ const bestSubject = (arr) => arr.reduce((accSubject, currSubject) => {
 
 const report = (arr) => arr.map((aluno) => ({ nome: aluno.nome, materia: bestSubject(aluno.materias).name }));
 
-console.log(report(estudantes));
+// console.log(report(estudantes));
 
 
 
@@ -103,6 +103,8 @@ const sumEvenNumbers = (array) => isEven(array).reduce((result, number) => resul
 // console.log(sumEvenNumbers(numbers));
 
 
-const bigger = numbers.reduce((bigger, number) => ((bigger > number) ? bigger : number), 0);
-// console.log(bigger); // 85
+const bigger = numbers.reduce((bigger, number) => (
+  (bigger > number) ? bigger : number
+), 0);
+console.log(bigger); // 85
 
