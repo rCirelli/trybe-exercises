@@ -84,7 +84,7 @@ const mediaIdades = () => {
   return somaIdades / books.length;
 };
 
-// console.log(mediaIdades());
+console.log(mediaIdades());
 
 // 4 - Encontre o livro com o maior nome.
 
