@@ -84,6 +84,7 @@ function addTask(task) {
   const newTask = document.createElement('span');
   newTask.innerText = task;  
   taskContainer.appendChild(newTask);
+  taskInput.value = '';
   addLabel();
 }
 
@@ -123,6 +124,7 @@ const taskList = document.querySelector('.task-list');
 function addAppointment(text) {
   const newAppointment = document.createElement('div');
   newAppointment.innerText = text;
+  taskInput.value = '';
   taskList.appendChild(newAppointment);
 }
 
