@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+.header {
+  background-color: #333333;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-img {
+  width: 70px;  
+}
+
+.header-heading {
+  font-size: 23px;
+  color: white;
+}
+
+.header-sign-up {
+  color: white;
+}
+
+.first-section {
+  margin: 20px auto;
+  font-size: 19px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;  
+}
+
+.second-section-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.gallery-container {
+  max-width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+	align-content: center;
+}
+
+.gallery-element {
+  margin: 10px 10px;
+  padding: 15px 5px;
+  background-color: #e7e7e7;
+  border: 1px solid rgb(189, 186, 186);  
+  border-radius: 13px;
+  min-width: 170px;
+  min-height: 190px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 1px 1px 10px;
+}
+
+.gallery-element:hover {
+  transform: scale(1.05); 
+}
+
+.gallery-img {
+  width: 150px;
+  padding: 20px 0;
+}
+
+#css-logo {
+  width: 135px;
+  height: 190px;
+}
+
+.divider {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.divider hr {
+  width: 300px;
+}
+
+.social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-img {
+  width: 35px;
+  margin-left: 10px;
+}

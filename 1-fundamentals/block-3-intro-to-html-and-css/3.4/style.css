@@ -12,12 +12,17 @@
 
 body {
     background-color: #0a182e;
-    color: #8891af;
+    color: #0a182e;
     font-family: "Montserrat", sans-serif;
     line-height: 23px;
     padding: 20px 50px;
     max-width: 800px;
     margin: auto;
+}
+
+h1 {
+    color: #8891af;
+    text-align: center;
 }
 
 nav {
@@ -31,6 +36,12 @@ nav {
     padding-bottom: 20px;
 }
 
+nav a {
+    color: #8891af;
+    text-decoration: none;
+}
+
+
 nav ul {    
     text-align: center;
 }
@@ -43,12 +54,16 @@ nav ul li {
 }
 
 a {
-    color: #8891af;
+    color: #0a182e;
     text-decoration: none;
 }
 
 a:hover {
     color: #65ffdc;
+}
+
+img {
+    margin: 0.5rem auto;
 }
 
 header {
@@ -57,4 +72,25 @@ header {
 
 article {
     margin-left: +20px;
+    text-align: justify;
+}
+
+section {
+    background-color: #8891af;
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+}
+
+footer {
+    padding-bottom: 1rem;   
+}
+
+footer a {
+    margin-right: 1rem;    
+    font-size: 15px;
+}
+
+footer h5 {
+    margin: 0.2rem 0;
 }
