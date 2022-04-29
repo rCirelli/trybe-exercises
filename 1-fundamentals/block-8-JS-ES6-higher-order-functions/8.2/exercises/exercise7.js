@@ -69,18 +69,16 @@ const sortBirthYear = () => books.sort((a, b) => a.author.birthYear - b.author.b
 
 function authorUnique() {
   const sortedArr = sortBirthYear();
-  // sortedArr.forEach((book, index) => {
-  sortedArr.every((book, index) => {
+  return !sortedArr.some((book, index) => {
     if (index < sortedArr.length - 1) {
-      console.log(book.author.birthYear, sortedArr[index + 1].author.birthYear);
       if (book.author.birthYear === sortedArr[index + 1].author.birthYear) {
-        console.log('false');
+        return true;
+      } else {
         return false;
       }
+      
     }
   });
-  // console.log('true');
-  return true;
 }
 
 console.log(authorUnique());
