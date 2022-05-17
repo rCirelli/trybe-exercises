@@ -17,7 +17,7 @@ const greet = (temperature) =>
 // definição da função sendMarsTemperature...
 const sendMarsTemperature = (callback) => {
   setTimeout(() => {
-    console.log(callback(getMarsTemperature()));
+    return callback(getMarsTemperature());
   }, messageDelay());
 }
 
