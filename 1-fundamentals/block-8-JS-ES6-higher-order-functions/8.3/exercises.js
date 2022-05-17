@@ -7,7 +7,7 @@ const updateProducts = (productsList, pricesList) => (
 
 const pricedProducts = updateProducts(products, prices);
 
-// console.log(pricedProducts);
+console.log(pricedProducts);
 
 const numeros = [1, 2, 3, 4, 5, 6];
 console.log(numeros.map((numero) => numero * 2)); // Retorno: [2, 4, 6, 8, 10, 12]
@@ -21,3 +21,5 @@ numeros.forEach((numero) => {
 console.log(paresMenoresQueCinco); // Retorno: [2, 4]
 
 const paresMenoresQueCincoFilter = numeros.filter((numero) => numero < 5 && numero % 2 ===0);
+
+console.log(paresMenoresQueCincoFilter);

@@ -61,24 +61,36 @@ const books = [
   },
 ];
 
-//7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+// 2 - Crie uma string com os nomes de todas as pessoas autoras.
 
-const expectedResult = false;
+const nomesAutores = books.reduce((acc, curr, index) => {
+  return index === 1 
+  ? `${acc.author.name}, ${curr.author.name}` 
+  : `${acc}, ${curr.author.name}`;
+});
 
-const sortBirthYear = () => books.sort((a, b) => a.author.birthYear - b.author.birthYear);
+// console.log(nomesAutores);
 
-function authorUnique() {
-  const sortedArr = sortBirthYear();
-  return !sortedArr.some((book, index) => {
-    if (index < sortedArr.length - 1) {
-      if (book.author.birthYear === sortedArr[index + 1].author.birthYear) {
-        return true;
-      } else {
-        return false;
-      }
-      
-    }
+// 3 - Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+
+const mediaIdades = () => {
+  const somaIdades = books.reduce((acc, curr, index) => {
+    return acc + (curr.releaseYear - curr.author.birthYear) // * jeito do gabarito
+    // * meu jeito ------------
+    // * return index === 1
+    // * ? (acc.releaseYear - acc.author.birthYear) + (curr.releaseYear - curr.author.birthYear)
+    // * : acc + (curr.releaseYear - curr.author.birthYear);
+  }, 0);
+  return somaIdades / books.length;
+};
+
+console.log(mediaIdades());
+
+// 4 - Encontre o livro com o maior nome.
+
+function longestNamedBook() {
+  return books.reduce((acc, curr) => {
+    return acc.name.length > curr.name.length ? acc : curr.name;
   });
 }
-
-console.log(authorUnique());
+console.log(longestNamedBook());

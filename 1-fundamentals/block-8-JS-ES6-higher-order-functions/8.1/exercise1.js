@@ -1,4 +1,4 @@
-const email = (nomeCompleto) => `${nomeCompleto.replaceAll(' ', '_').toLowerCase()}@trybe.com`;
+const email = (nomeCompleto) => `${nomeCompleto.replace(' ', '_').toLowerCase()}@trybe.com`;
 
 const employeeData = (nomeCompleto, callback) => ({nomeCompleto, email: email(nomeCompleto),});
 
