@@ -98,17 +98,17 @@ const books = [
 
 const expectedResult = 'O Senhor dos Anéis';
 
-// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
-
-function authorWith3DotsOnName() {
-  return books.filter((book) => {
-    for (let i = 0; i < 3; i += 1){
-      const thisBook = book.author.name.split(' ')[i];
-      if (thisBook[thisBook.length - 1] === '.') return book;
-    }
+function authosWith3Initials() {
+  const result = books.find((book) => {
+    let initialsCount = 0;
+    const thisAuthor = book.author.name.split(' ');
+    thisAuthor.map((word) => {
+      if (word.length === 2 && word[1] === '.') {
+        initialsCount += 1;
+      }
+    });      
+    if (initialsCount === 3) return book;
   });
-  // return books.find((book) => {
-  // });
+  return result.name;
 }
-// console.log(books[1].author.name.split(' '));
-console.log(authorWith3DotsOnName());
+console.log(authosWith3Initials());

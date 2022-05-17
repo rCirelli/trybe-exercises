@@ -21,4 +21,5 @@ numeros.forEach((numero) => {
 console.log(paresMenoresQueCinco); // Retorno: [2, 4]
 
 const paresMenoresQueCincoFilter = numeros.filter((numero) => numero < 5 && numero % 2 ===0);
+
 console.log(paresMenoresQueCincoFilter);
