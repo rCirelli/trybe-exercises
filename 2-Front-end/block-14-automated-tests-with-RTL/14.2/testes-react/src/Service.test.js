@@ -22,3 +22,21 @@ test('Exercício 2: altera função getRandomNumber', () => {
   expect(service.getRandomNumber).toHaveBeenCalledTimes(1);
   expect(result).toBe(5);
 });
+
+test('Exercício 3', () => {
+  const service = require('./logic/service');
+  const mockMultiply = jest.spyOn(service, 'getRandomNumber');
+  mockMultiply.mockImplementation((a, b, c) => a * b * c);
+
+  const result = mockMultiply(10, 2, 5);
+  expect(mockMultiply).toHaveBeenCalledTimes(1);
+  expect(result).toBe(100);
+
+  mockMultiply.mockRestore();
+
+  mockMultiply.mockImplementation((a) => a*2);
+  const result2 = mockMultiply(100);
+  expect(mockMultiply).toHaveBeenCalledTimes(1);
+  expect(result2).toBe(200);
+
+});
