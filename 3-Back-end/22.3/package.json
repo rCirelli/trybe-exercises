@@ -3,6 +3,7 @@
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "mocha": "^10.0.0",
+    "nodemon": "^2.0.19",
     "sinon": "^14.0.0"
   },
   "name": "22.3",
@@ -94,7 +95,8 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "mocha ./examples/tests/integration --exit"
+    "test": "mocha ./examples/tests/integration --exit",
+    "dev": "nodemon examples/src/server.js"
   },
   "keywords": [],
   "author": "Raphael Cirelli",
