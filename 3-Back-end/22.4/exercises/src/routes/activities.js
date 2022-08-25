@@ -5,9 +5,11 @@ const descriptionValidation  = require('../middlewares/descriptionValidation');
 const createdAtValidation  = require('../middlewares/createdAtValidation');
 const ratingValidation  = require('../middlewares/ratingValidation');
 const difficultyValidation = require('../middlewares/difficultyValidation');
+const authentication = require('../middlewares/authentication');
 const router = express.Router();
 
 router.use(
+  authentication,
   nameValidation,
   priceValidation,
   descriptionValidation,
