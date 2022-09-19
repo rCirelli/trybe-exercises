@@ -16,6 +16,13 @@ const getAll = async () => {
   return users;
 };
 
+const insert = async ({ firstName, lastName, age, city, street, number }) => {
+  const employee = await Employee.create({ firstName, lastName, age });
+
+  await Address.create({ city, street, number, employeeId: employee.id });
+  return employee;
+};
+
 const getById = async (id) => {
   const employee = await Employee.findOne({
       where: { id },
@@ -34,4 +41,4 @@ const getById = async (id) => {
 //   return employee;
 // }
 
-module.exports = { getAll, getById };
+module.exports = { getAll, getById, insert };
