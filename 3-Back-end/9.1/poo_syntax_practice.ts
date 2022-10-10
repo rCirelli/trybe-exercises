@@ -4,30 +4,52 @@ interface IResolution {
 };
 
 class Tv {
-  brand: string;
-  size: number;
-  resolution: IResolution;
-  connections: Array<string>;
-  connectedTo: string | null;
+  private _brand: string;
+  private _size: number;
+  private _resolution: IResolution;
+  private _connections: Array<string>;
+  private _connectedTo: string | null;
 
-  constructor(brand: string, size: number, resolution: IResolution, connections: Array<string>) {
-    this.brand  = brand;
-    this.size = size;
-    this.resolution = resolution;
-    this.connections = connections;
-    this.connectedTo = null;
+  constructor(_brand: string, size: number, resolution: IResolution, connections: Array<string>) {
+    this._brand  = _brand;
+    this._size = size;
+    this._resolution = resolution;
+    this._connections = connections;
+    this._connectedTo = null;
   }
 
   public turnOn() {
     const info = {
-      Brand: this.brand,
-      Size: this.size,
-      Resolution: `${this.resolution.width} x ${this.resolution.height}`,
-      Connections: this.connections.join(', '),
+      _Brand: this._brand,
+      Size: this._size,
+      Resolution: `${this._resolution.width} x ${this._resolution.height}`,
+      Connections: this._connections.join(', '),
+      ConnectedTo: this._connectedTo,
     }
     console.table(info);
+  }
+
+  get connectedTo() {
+    return this._connectedTo;
+  }
+
+  set connectedTo(newValue: string | null) {
+    if (newValue === null) {
+      this._connectedTo = null;
+    } else if(this._connections.includes(newValue)) {
+      this._connectedTo = newValue;
+    } else {
+      console.log("connection unavailable!")
+    }
   }
 }
 
 const television = new Tv('samsung', 65, { width: 1920, height: 1080 }, ['hdmi', 'composite', 'ethernet']);
 television.turnOn();
+
+television.connectedTo = 'display port';
+television.turnOn();
+
+television.connectedTo = 'hdmi';
+television.turnOn();
+
