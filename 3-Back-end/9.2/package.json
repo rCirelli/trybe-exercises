@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsnd poo_syntax_practice.ts"
+    "start": "tsnd poo_inheritance_practice.ts"
   },
   "keywords": [],
   "author": "",
